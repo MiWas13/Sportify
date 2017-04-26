@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.michael.sportify">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAwvsoRoAWG6cGwQaCvD0RxA6X_NjVMT7c" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".BottomMenu"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:finishOnTaskLaunch="true"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name=".AddUser.AddUserService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Registration.RegistrationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".CreateGame.CreateGameService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Profile.UpdateImageService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Profile.ProfileInfoService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Profile.ProfileEditService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".AddUser.AddListService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Authorization.AuthorizationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".ConcreteGame.ConcreteGameService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".ConcreteGame.TakePartService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".ConcreteSportKind.ConcreteSportService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".ConcreteGameChat.ConcreteGameChatService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".ConcreteGameChat.SendMessageService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".ConcreteGame.DeleteGameService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

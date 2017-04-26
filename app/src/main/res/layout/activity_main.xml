@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_new_small"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="3.8dp"
+        android:paddingBottom="106dp"
+        android:text="SPORTIFY"
+        android:textColor="#ffffff"
+        android:textSize="45sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="-95dp"
+        android:gravity="center"
+        android:text="Найдите спарринг-партнёра \n для занятий спортом"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_registration"
+        android:layout_width="211dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="74dp"
+        android:background="#2196f3"
+        android:onClick="onClick"
+        android:text="Зарегистрироваться"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Уже есть аккаунт?"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/btn_authorization"
+        android:layout_width="211dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="74dp"
+        android:layout_marginTop="5dp"
+        android:background="#2196f3"
+        android:onClick="onClick"
+        android:text="Войти"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_fb"
+        android:layout_width="211dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
